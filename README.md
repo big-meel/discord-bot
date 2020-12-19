@@ -1,1 +1,1 @@
-# discord-bot
+# nubia-bot

@@ -23,6 +23,10 @@ client.on('message', msg => {
     case 'nubia i love you':
       msg.react('❤️')
       break;
+    case 'nubia we love you':
+      msg.react('❤️')
+      msg.channel.send('Love you guys too... Except Bob. 😂')
+      break;
   }
 });
 

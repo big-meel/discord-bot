@@ -10,7 +10,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  switch(msg.content) {
+  switch(msg.content.toLowerCase()) {
     case 'ping':
       msg.channel.send('pong');
       break;

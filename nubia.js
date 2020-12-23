@@ -28,6 +28,10 @@ client.on('message', msg => {
       msg.channel.send('Love you guys too... Except Bob. 😂')
       break;
   }
+
+  if (msg.content === `${process.env.PREFIX} server`) {
+    msg.channel.send(`This server's name is: ${msg.guild.name}`);
+  }
 });
 
 client.login( process.env.BOT_TOKEN )

@@ -32,6 +32,13 @@ client.on('message', msg => {
   if (msg.content === `${process.env.PREFIX} server`) {
     msg.channel.send(`This server's name is: ${msg.guild.name}`);
   }
+
+  // Command to stream audio files
+
+  // Command for setting meetings and reminders
+
+  // Send whatsapp messages
+
 });
 
 client.login( process.env.BOT_TOKEN )

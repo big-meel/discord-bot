@@ -4,10 +4,22 @@ const Discord = require('discord.js');
 const client = new Discord.Client({
   partials: ["MESSAGE"]
 });
+const generalID = process.env.GENERAL_ID
+
+
+let newTime = new Date('December 24, 2020 10:52:00')
+let christmasDay = new Date('December 25, 2020 00:00:00')
+
 
 client.on('ready', () => {
   console.log(`Nubia: On.`);
 });
+
+
+client.setTimeout(async () => {
+  let response = await client.channels.fetch(generalID)
+  response.send('Merry Christmas Gentlemen!')
+}, christmasDay - Date.now())
 
 client.on('message', msg => {
   switch(msg.content.toLowerCase()) {
@@ -32,6 +44,10 @@ client.on('message', msg => {
   if (msg.content === `${process.env.PREFIX} server`) {
     msg.channel.send(`This server's name is: ${msg.guild.name}`);
   }
+
+  
+
+
 
   // Command to stream audio files
 

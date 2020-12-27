@@ -7,8 +7,8 @@ const client = new Discord.Client({
 const generalID = process.env.GENERAL_ID
 
 
-let newTime = new Date('December 24, 2020 10:52:00')
-let christmasDay = new Date('December 25, 2020 00:00:00')
+let newYears = new Date('January 1, 2021 05:00:00')
+let testDate = new Date('December 27, 2020 09:03:00')
 
 
 client.on('ready', () => {
@@ -18,8 +18,8 @@ client.on('ready', () => {
 
 client.setTimeout(async () => {
   let response = await client.channels.fetch(generalID)
-  response.send('Merry Christmas Gentlemen!')
-}, christmasDay - Date.now())
+  response.send('Happy New Year!!')
+}, newYears - Date.now())
 
 client.on('message', msg => {
   switch(msg.content.toLowerCase()) {
